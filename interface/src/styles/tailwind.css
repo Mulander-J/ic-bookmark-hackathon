@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.dn-text{
+		@apply text-gray-900 dark:text-white
+	}
+	.wh-full{
+		@apply w-full h-full;	
+	}
+	.ctx-center {
+    @apply flex flex-col justify-center items-center;
+  }
+	.app-h{
+		height: calc(100vh - 5rem);
+	}
+	.font-sc{
+		font-size: calc(100% + 2vmin);
+	}
+
+	.online .bg-main{
+		@apply bg-sky-600/[.8];
+	}
+	.offline .bg-main{
+		@apply bg-rose-600/[.6];
+	}
+	.online .txt-main{
+		@apply text-sky-400;
+	}
+	.offline .txt-main{
+		@apply text-rose-400;
+	}
+}
+
+@layer components{
+	/*page-header*/
+	.p-header{
+		@apply sticky top-0 p-5 z-50;
+		transition: .3s ease;
+	}
+	.main-above .p-header{
+		@apply bg-white dark:bg-gray-600;
+	}
+	.p-body{
+		@apply p-5 pt-0;
+	}
+	/*button*/
+	.slate-widget{
+		@apply bg-slate-400/[.4] hover:bg-slate-300/[.4] rounded-lg
+	}
+	.btn{
+		@apply cursor-pointer rounded-lg;
+	}
+	.lgBtn{
+		@apply w-min mt-6 py-2 px-8;
+	}
+	.icoBtn {
+		@apply  flex items-center justify-center  p-2;
+    height: 2rem;
+    width: 2rem;
+	}
+	/*form*/
+	.form-item{
+		@apply flex flex-col my-2
+	}
+	.form-item label{
+		@apply mb-2 text-lg text-gray-800 dark:text-gray-400
+	}
+	.form-widget{
+		@apply align-baseline;
+	}
+	.form-widget::-webkit-input-placeholder {
+		@apply text-gray-800/[.8] dark:text-gray-400/[.8];
+	}
+}

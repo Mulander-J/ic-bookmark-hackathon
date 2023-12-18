@@ -1,0 +1,59 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Inter,
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+}
+.font-inter{
+  font-family: Inter,sans-serif !important;
+}
+.font-pixie{
+  font-family: ProcrastinatingPixie,Inter,sans-serif;
+}
+.pix-h2{
+  font-family: ProcrastinatingPixie,Inter,sans-serif;
+  font-size: calc(10px + 2vmin);
+  text-transform: uppercase;
+}
+
+/* Fade transition*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.38s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+/* Slide-right */
+.slide-enter-active,
+.slide-leave-active {
+  transition: 0.38s ease;
+}
+.slide-enter-from {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.topScale-enter-active {
+  animation: top-change 0.2s;
+}
+.topScale-leave-active {
+  animation: top-change 0.2s reverse;
+}
+
+@keyframes top-change {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
